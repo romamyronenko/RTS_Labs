@@ -23,6 +23,7 @@ def signal(n, omega, min_value=0, max_value=1):
 
 
 def get_w(N, p, k):
+    """Return tuple with real and imagination parts of w."""
     return math.cos(-2*math.pi*p*k/N), math.sin(-2*math.pi*p*k/N)
 
 

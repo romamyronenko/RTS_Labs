@@ -53,9 +53,6 @@ def fft(x):
     return FR, Fi
 
 
-
-
-
 # option values
 n = 10
 omega = 1100
@@ -82,15 +79,15 @@ ax_5 = fig.add_subplot(3, 2, 5)
 
 ax_1.plot(range(N), FR)
 ax_2.plot(range(N), Fi)
-ax_3.plot(range(N), x)
+ax_3.plot(range(N), numpy.fft.fft(x))
 ax_4.plot(range(N), F)
-ax_5.plot(range(N), numpy.fft.fft(x))
+ax_5.plot(range(N), x)
 
-ax_1.set(title='FR')
+ax_1.set(title='Швидке перетворення')
 ax_2.set(title='Fi')
-ax_3.set(title='x')
+ax_3.set(title='numpy.fft')
 ax_4.set(title='F')
-ax_5.set(title='numpy')
+ax_5.set(title='x')
 
 
 plt.show()
